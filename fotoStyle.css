@@ -1,0 +1,320 @@
+/*Css for ryanhodge.fotos website*/
+
+/*Code for font*/
+@import url("https://fonts.googleapis.com/css2?family=Castoro+Titling&family=Monoton&display=swap");
+
+:root {
+    font-size: 16px;
+    --ff: "Monoton", sans-serif;
+    --ff2: "Castoro Titling", cursive;
+    --color: red;
+    --color2: lightpink;
+    --color3: lightCoral;
+    --color4: darkgreen;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: sienna;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.background {
+    background-image: url("images/me.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100vh;
+    position: relative; /* needed for ::before to work */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* black at 50% opacity */
+    z-index: 0;
+}
+
+/* Make sure content sits ABOVE the overlay */
+.background * {
+    position: relative;
+    z-index: 1;
+}
+
+.hero {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero h1 {
+    color: var(--color3);
+    font-size: 5rem;
+    font-family: var(--ff);
+    font-weight: 300;
+    border-radius: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.hero p {
+    color: black;
+    font-size: 3rem;
+    font-family: var(--ff);
+    background-color: var(--color2);
+    border-radius: 15px;
+}
+
+.subheader {
+    font-size: 3rem;
+    color: var(--color2);
+    font-family: var(--ff2);
+    font-weight: 300;
+}
+
+.contentContainer {
+    width: 80%;
+    height: auto;
+    display: flex;
+    align-items: centers;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    margin: 10px;
+    gap: 8px;
+}
+
+.photoCard {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    outline: 1px solid lightpink;
+    box-shadow: 5px 5px 5px peachpuff;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.photoCard img {
+    display: block;
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    object-position: top;
+    margin: 0;
+    padding: 0;
+}
+
+/* Photo card hover effect */
+.photoCard::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.6) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: skewX(-20deg);
+    transition: left 0.75s ease;
+}
+
+.photoCard:hover::before {
+    left: 150%;
+}
+
+button {
+    z-index: 2;
+}
+.cardContent {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    font-family: var(--ff2);
+    color: black;
+    background-color: antiquewhite;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+/* From Uiverse.io by adamgiebl */
+.cssbuttons-io-button {
+    background: var(--color3);
+    color: white;
+    font-family: inherit;
+    padding: 0.35em;
+    padding-left: 1.2em;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 0.9em;
+    border: none;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 0 1.6em -0.6em peachpuff;
+    overflow: hidden;
+    position: relative;
+    height: 2.8em;
+    padding-right: 3.3em;
+    cursor: pointer;
+}
+
+/*Button Code*/
+
+.cssbuttons-io-button .icon {
+    background: white;
+    margin-left: 1em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.2em;
+    width: 2.2em;
+    border-radius: 0.7em;
+    box-shadow: 0.1em 0.1em 0.6em 0.2em peachpuff;
+    right: 0.3em;
+    transition: all 0.3s;
+}
+
+.cssbuttons-io-button:hover .icon {
+    width: calc(100% - 0.6em);
+}
+
+.cssbuttons-io-button .icon svg {
+    width: 1.1em;
+    transition: transform 0.3s;
+    color: var(--color3);
+}
+
+.cssbuttons-io-button:hover .icon svg {
+    transform: translateX(0.1em);
+}
+
+.cssbuttons-io-button:active .icon {
+    transform: scale(0.95);
+}
+
+.services {
+    width: 80%;
+    height: auto;
+    padding: 0;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    outline: 1px solid lightpink;
+    box-shadow: 5px 5px 5px peachpuff;
+    border-radius: 20px;
+    background-color: antiquewhite;
+}
+
+.services ul {
+    list-style-type: square;
+    padding: 10px;
+    font-size: 2.5rem;
+}
+
+.services p {
+    font-size: 2.5rem;
+    font-style: bold;
+}
+
+.contactInfo {
+    width: 80%;
+    height: auto;
+    list-style: none;
+    gap: 10px;
+    font-size: 1.5rem;
+    outline: 1px solid var(--color2);
+    box-shadow: 5px 5px 5px var(--color2);
+    background-color: antiquewhite;
+    padding: 0;
+    margin: 0;
+    font-size: 2.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    gap: 0;
+}
+
+.contactInfo ul {
+    list-style: none;
+}
+
+.contactInfo a {
+    color: sienna;
+    text-decoration: none;
+}
+
+.contactInfo a:visited {
+    color: var(--color4);
+}
+
+.contactInfo a:hover {
+    color: var(--color4);
+}
+
+/* Media queries for responsive design */
+
+@media (max-width: 900px) {
+    :root {
+        font-size: 12px;
+    }
+    main {
+        padding: 0;
+        gap: 0;
+    }
+}
+
+@media (max-width: 680px) {
+    :root {
+        font-size: 6px;
+    }
+    main {
+        padding: 0;
+        gap: 0;
+    }
+
+    .contentContainer {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 10px;
+    }
+
+    .photoCard {
+        height: auto;
+        font: 2rem;
+    }
+}
