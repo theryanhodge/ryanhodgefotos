@@ -26,7 +26,7 @@ main {
 }
 
 .background {
-    background-image: url("me.jpg");
+    background-image: url("images/me.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -82,11 +82,30 @@ main {
     border-radius: 15px;
 }
 
-.subheader {
-    font-size: 3rem;
+.subheader h2{
+    font-size: 4rem;
     color: var(--color2);
-    font-family: var(--ff2);
+    font-family: var(--ff);
     font-weight: 300;
+}
+
+.aboutMe {
+    width:80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    outline: 1px solid lightpink;
+    box-shadow: 5px 5px 5px peachpuff;
+    background-color: cadetblue;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 10px;
+    margin-top: 1.5rem;
+}
+
+.aboutMe p {
+    font-size: 2.25rem;
+    font-family: var(ff2);
 }
 
 .contentContainer {
@@ -160,7 +179,7 @@ button {
     font-size: 1.5rem;
     font-family: var(--ff2);
     color: black;
-    background-color: antiquewhite;
+    background-color: cadetblue;
     height: 100%;
     padding: 0;
     margin: 0;
@@ -235,7 +254,7 @@ button {
     outline: 1px solid lightpink;
     box-shadow: 5px 5px 5px peachpuff;
     border-radius: 20px;
-    background-color: antiquewhite;
+    background-color: cadetblue;
 }
 
 .services ul {
@@ -256,8 +275,8 @@ button {
     gap: 10px;
     font-size: 1.5rem;
     outline: 1px solid var(--color2);
-    box-shadow: 5px 5px 5px var(--color2);
-    background-color: antiquewhite;
+    box-shadow: 5px 5px 5px peachpuff;
+    background-color: cadetblue;
     padding: 0;
     margin: 0;
     font-size: 2.25rem;
@@ -273,16 +292,16 @@ button {
 }
 
 .contactInfo a {
-    color: sienna;
+    color: var(--color2);
     text-decoration: none;
 }
 
 .contactInfo a:visited {
-    color: var(--color4);
+    color: black;
 }
 
 .contactInfo a:hover {
-    color: var(--color4);
+    color: var(--color2);
 }
 
 /* Media queries for responsive design */
