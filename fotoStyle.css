@@ -500,7 +500,7 @@ main {
     .photoCard:nth-child(4)::before { animation-delay: 1.2s; }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 685px) {
     :root {
         font-size: 6px;
     }
