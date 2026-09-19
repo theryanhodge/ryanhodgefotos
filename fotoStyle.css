@@ -106,13 +106,15 @@ main {
 .aboutMe p {
     font-size: 2.25rem;
     font-family: var(ff2);
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .contentContainer {
     width: 80%;
     height: auto;
     display: flex;
-    align-items: centers;
+    align-items: center;
     justify-content: space-evenly;
     width: 100%;
     height: 100%;
@@ -124,15 +126,15 @@ main {
 .photoCard {
     position: relative;
     width: 500px;
-    height: 500px;
+    height: 550px;
     display: flex;
     flex-direction: column;
     outline: 1px solid lightpink;
     box-shadow: 5px 5px 5px peachpuff;
     border-radius: 20px;
     overflow: hidden;
-    margin: 0;
-    padding: 0;
+    margin: 5px;
+    padding: 0px;
 }
 
 .photoCard img {
@@ -143,6 +145,13 @@ main {
     object-position: top;
     margin: 0;
     padding: 0;
+}
+
+.photoCard .cardContent {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Photo card hover effect */
@@ -167,8 +176,9 @@ main {
     left: 150%;
 }
 
-button {
+.photoCard button {
     z-index: 2;
+    margin-bottom: 3px;
 }
 .cardContent {
     padding: 10px;
@@ -242,8 +252,9 @@ button {
     transform: scale(0.95);
 }
 
+/*Services section*/
 .services {
-    width: 80%;
+    width: 100%;
     height: auto;
     padding: 0;
     margin-top: 2rem;
@@ -251,10 +262,7 @@ button {
     display: flex;
     flex-direction: column;
     align-items: center;
-    outline: 1px solid lightpink;
-    box-shadow: 5px 5px 5px peachpuff;
-    border-radius: 20px;
-    background-color: cadetblue;
+    justify-content: center;
 }
 
 .services ul {
@@ -264,44 +272,175 @@ button {
 }
 
 .services p {
-    font-size: 2.5rem;
+    font-size: 1.15rem;
     font-style: bold;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
-.contactInfo {
-    width: 80%;
-    height: auto;
-    list-style: none;
-    gap: 10px;
-    font-size: 1.5rem;
-    outline: 1px solid var(--color2);
-    box-shadow: 5px 5px 5px peachpuff;
-    background-color: cadetblue;
-    padding: 0;
+.carouselWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0rem;
+    width: 100%;
+}
+
+.carousel {
+    display: flex;
+    position: relative;
+    width: 100%;       /* adjust to your card size */
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
     margin: 0;
-    font-size: 2.25rem;
+    padding: 0;
+}
+
+/* Hide all cards by default */
+.servicesCard {
+    position: relative;
+    display: none;
+    width: 500px;
+    height: auto;
+    flex-direction: column;
+    outline: 1px solid lightpink;
+    box-shadow: 5px 5px 5px peachpuff;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 5px;
+    padding: 0px;
+
+}
+
+.servicesCard img {
+    display: block;
+    width: 100%;
+    max-height: 45%;
+    object-fit: cover;
+    object-position: top;
+    margin: 0;
+    padding: 0;
+
+}
+
+.servicesCard .cardContent {
+    padding: 3px;
+}
+
+/* Only show the active card */
+.servicesCard.active {
+    display: block;
+}
+
+/* Navigation buttons */
+.carouselBtn {
+    background: none;
+    border: 2px solid var(--color);
+    color: var(--color);
+    font-size: 3rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.carouselBtn:hover {
+    background-color: var(--color);
+    color: white;
+}
+
+/* Dot indicators */
+.dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 1rem;
+}
+
+.dot {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: lightslategray;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: var(--color);
+}
+
+/* Contact info section */
+.contactInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 2rem;
+    width: 80%;
+    margin: 2rem auto;
+    background-color: cornsilk;
+    border-radius: 10px;
+    outline: 1px solid lightpink;
+    box-shadow: 5px 5px 5px peachpuff;
+}
+
+.contactInfo a{
+    text-decoration: none;
+    color: var(--color4);
+    font-family: var(--ff2);
+    font-size: 1.2rem;
+}
+
+.contactDetails {
+    flex: 1;
+}
+
+.contactDetails ul {
+    list-style: none;
+    padding: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    border-radius: 20px;
-    gap: 0;
+    gap: 1rem;
 }
 
-.contactInfo ul {
-    list-style: none;
+.contactForm {
+    flex: 1;
 }
 
-.contactInfo a {
-    color: var(--color2);
-    text-decoration: none;
+.contactForm form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
 }
 
-.contactInfo a:visited {
-    color: black;
+.contactForm input, .contactForm select, .contactForm textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid lightpink;
+    border-radius: 8px;
+    font-family: var(--ff2);
+    font-size: 0.9rem;
+    box-sizing: border-box;   /* prevents inputs from overflowing */
+    outline: none;
 }
 
-.contactInfo a:hover {
-    color: var(--color2);
+.contactForm input:focus,
+.contactForm select:focus,
+.contactForm textarea:focus {
+    border-color: var(--color);
+    box-shadow: 0 0 5px var(--color2);
+}
+
+.contactForm button {
+    align-self: flex-start;
+    justify-content: center;
 }
 
 /* Media queries for responsive design */
@@ -342,6 +481,11 @@ button {
         );
         transform: skewX(-20deg);
         animation: shimmer 2.5s ease-in-out 2;
+    }
+    .contactInfo{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     @keyframes shimmer {
