@@ -13,7 +13,7 @@
         <link href="fotoStyle.css" rel="stylesheet" />
     </head>
 
-    <body>
+<body>
         <main>
             <!--Html class for configuring the background image-->
             <div class="background">
@@ -22,7 +22,18 @@
                 </div>
             </div>
 
-
+<!--About Me Section -->
+            <div class="aboutMe">
+                <div class="subheader">
+                    <h2>About Me</h2>
+                </div>
+                <p>Hey, my name is Ryan and I'm a young photographer based in the Middle Georgia area.
+                    Since I was a child, I've always enjoyed taking pictures of any and everything.
+                    Having the ability to capture moments in time and share them with others has been
+                    something that I've always found special about photography. Now, I'm looking to offer
+                    my skills and services to those who need them for special occassions or simply to make a moment
+                    last forever.</p>
+            </div>
 
             <!--html class for configuring the subheaders -->
             <div class="subheader">
@@ -160,10 +171,9 @@
                         </script>
                     </div>
                 </div>
-            </div>
-            
-<!--Asa and Makayla photo card -->
-            <div class="photoCard">
+
+            <!--Asa and Makayla photo card -->
+                <div class="photoCard">
                 <img
                     src="Asa.jpg"
                     alt="The main picture for 'Asa and Makayla'"
@@ -196,75 +206,196 @@
                             .getElementById("asaMakaylaBtn")
                             .addEventListener("click", function () {
                                 window.open(
-                                    "https://ryanhodgefotos.pixieset.com/anightoutwithasaandmakayla/",
+                                    "https://ryanhodgefotos.pixieset.com/anightoutwithasaandmaykala/",
                                     "_blank",
                                     "noopener noreferrer",
                                 );
                             });
                     </script>
                 </div>
-            </div>
-            
-            <div class="aboutMe">
-                <div class="subheader">
-                    <h2>About Me</h2>
                 </div>
-                <p>Hey, my name is Ryan and I'm a young photographer based in the Middle Georgia area.
-                    Since I was a child, I've always enjoyed taking pictures of any and everything.
-                    Having the ability to capture moments in time and share them with others has been
-                    something that I've always found special about photography. Now, I'm looking to offer
-                    my skills and services to those who need them for special occassions or simply to make a moment
-                    last forever.</p>
+
             </div>
 
+            <!--Jon and Patty photo card -->
+                <div class="photoCard">
+                <img
+                    src="Jon.jpg"
+                    alt="The main picture for 'Jon and Patty'"
+                />
+                <div class="cardContent">
+                    <h3>A Beach Proposal with Jon and Patty</h3>
+
+                    <!-- From Uiverse.io by adamgiebl -->
+                    <button id="jonPattyBtn" class="cssbuttons-io-button">
+                        SEE ALL
+                        <div class="icon">
+                            <svg
+                                height="24"
+                                width="24"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path d="M0 0h24v24H0z" fill="none"></path>
+                                <path
+                                    d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                                    fill="currentColor"
+                                ></path>
+                            </svg>
+                        </div>
+                    </button>
+
+                    <!--JavaScript for button -->
+                    <script>
+                        document
+                            .getElementById("jonPattyBtn")
+                            .addEventListener("click", function () {
+                                window.open(
+                                    "https://ryanhodgefotos.pixieset.com/abeachproposalwithjonandpatty/",
+                                    "_blank",
+                                    "noopener noreferrer",
+                                );
+                            });
+                    </script>
+                </div>
+                </div>
+
+            </div>
+
+            <!--Services Section -->
             <div class="contentContainer">
                 <div class="services">
                     <div class="subheader">
                         <h2>My Services</h2>
                     </div>
-                    <ul>
-                        <li>Solo Portraits</li>
-                        <li>Group Portraits</li>
-                        <li>Couple Portraits</li>
-                        <li>Corporate and Personal Events</li>
-                    </ul>
-                    <p>Contact me for more information or to book a session.</p>
+
+                <div class="carouselWrapper">
+
+                <div class="carousel">
+
+                    <!--Solo Portraits -->
+                    <div class="servicesCard active">
+                        <img src="soloPortrait.jpg" alt="Solo Portrait">
+                        <div class="cardContent">
+                            <h3>Solo Portraits</h3>
+                            <p>You in your own space, capturing it forever. Whether its for a graduation, a professional headshot, or a special occasion, I will ensure the best version
+                                of you is captured.</p>
+                        </div>
+                    </div>
+                        <!--Couple Portraits -->
+                    <div class="servicesCard">
+                        <img src="couplePic.jpg" alt="Solo Portrait">
+                        <div class="cardContent">
+                            <h3>Couple Portraits</h3>
+                            <p>You plus one, in your own world. I'm here to turn the invisible chemistry between friends and partners
+                                into a beautiful, lasting photograph. From something as simple as a couple's first date to the
+                                proposal, I'll capture the essence of your relationship and the happiness that comes with it.</p>
+                        </div>
+                    </div>
+                        <!--Family/Group Portraits -->
+                    <div class="servicesCard">
+                        <div class="cardContent">
+                            <h3>Group Portraits</h3>
+                            <p>A whole bunch of people coming together and me photographing them. This is perfect for family gatherings or group activites.
+                                Everything is fun when you there's a group involved , and I'm here to make sure you remember every moment with them.
+                            </p>
+                        </div>
+                    </div>
+                    <!--Event Portraits -->
+                    <div class="servicesCard">
+                        <div class="cardContent">
+                            <h3>Events</h3>
+                            <p>Some things in life are worth throwing a party for, and those things are usually worth having a photographer for to make sure you never forget them.
+                                Whether it's a wedding, a anniversary, or a corporate event, I'm here to make sure you have something to take home with you at the end.</p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                            <!-- Dot indicators -->
+                            <div class="dots">
+                                <span class="dot active" onclick="goToCard(0)"></span>
+                                <span class="dot" onclick="goToCard(1)"></span>
+                                <span class="dot" onclick="goToCard(2)"></span>
+                                <span class="dot" onclick="goToCard(3)"></span>
+                            </div>
+                    </div>
                 </div>
 
 
-            </div>
-
-            <!--Html class for configuring the contact information-->
+            <!-- the contact information-->
             <div class="contactInfo">
-                <div class="subheader">
-                    <h2>Contact Me!</h2>
+                <div class="contactDetails">
+                    <div class="subheader">
+                        <h2>Contact Me!</h2>
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="mailto:ryanhodgefotos@gmail.com">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                                Email: hello@ryanhodgefotos.digital
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/ryanhodge.fotos/">
+                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                                Instagram: ryanhodge.fotos
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/share/14qCdCdaSi9/?mibextid=wwXlfr">
+                                <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                                Facebook: Ryan Hodge
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-                <ul>
-                    <li>
-                        <a href="mailto:hello@ryanhodgefotos.digital"
-                            ><i class="fa fa-envelope" aria-hidden="true"></i>
-                            Email: hello@ryanhodgefotos.digital</a
-                        >
-                    </li>
-                    <li>
-                        <a href="https://www.instagram.com/ryanhodge.fotos/"
-                            ><i class="fa fa-instagram" aria-hidden="true"></i>
-                            Instagram: ryanhodge.fotos</a
-                        >
-                    </li>
-                    <li>
-                        <a
-                            href="https://www.facebook.com/share/14qCdCdaSi9/?mibextid=wwXlfr"
-                            ><i
-                                class="fa fa-facebook-square"
-                                aria-hidden="true"
-                            ></i>
-                            Facebook: Ryan Hodge</a
-                        >
-                    </li>
-                </ul>
+
+                <div class="contactForm">
+                    <div class="subheader">
+                        <h2>Book a Session</h2>
+                    </div>
+                    <form action="https://formspree.io/f/xrpbgeag" method="POST">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                        <input type="tel" name="phone" placeholder="Your Phone Number" required>
+                        <select name="service" required>
+                            <option value="" disabled selected>Select a Service</option>
+                            <option value="solo">Solo Portrait</option>
+                            <option value="couple">Couple Portrait</option>
+                            <option value="group">Group Portrait</option>
+                            <option value="event">Event</option>
+                        </select>
+                        <textarea name="message" placeholder="Any additional details..." rows="3"></textarea>
+                        <button type="submit" class="cssbuttons-io-button">Send Message</button>
+                    </form>
+                </div>
             </div>
         </main>
+    <!--Photo Carousel Script -->
+    <script>
+        let currentCard = 0;
+        const cards = document.querySelectorAll('.servicesCard');
+        const dots = document.querySelectorAll('.dot');
+
+        function moveCarousel(direction) {
+            // Remove active from current card and dot
+            cards[currentCard].classList.remove('active');
+            dots[currentCard].classList.remove('active');
+
+            // Update index, wrap around at ends
+            currentCard = (currentCard + direction + cards.length) % cards.length;
+
+            // Add active to new card and dot
+            cards[currentCard].classList.add('active');
+            dots[currentCard].classList.add('active');
+        }
+
+        function goToCard(index) {
+            cards[currentCard].classList.remove('active');
+            dots[currentCard].classList.remove('active');
+            currentCard = index;
+            cards[currentCard].classList.add('active');
+            dots[currentCard].classList.add('active');
+        }
+    </script>
     </body>
 </html>
-+
