@@ -500,7 +500,7 @@ main {
     .photoCard:nth-child(4)::before { animation-delay: 1.2s; }
 }
 
-@media (max-width: 680px) {
+@media (max-width: 380px) {
     :root {
         font-size: 6px;
     }
@@ -519,5 +519,15 @@ main {
     .photoCard {
         height: auto;
         font: 2rem;
+        width: 80%;
+    }
+
+    .services {
+        width: 80%;
+    }
+
+    .contactInfo {
+        width: 80%;
     }
 }
+
